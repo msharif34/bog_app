@@ -1,0 +1,12 @@
+<%= link_to 'Add Creature', new_creature_path %>
+
+<% @creatures.each do |creature| %>
+
+	<p>
+		Name: <%= creature.name %> <br />
+		Description: <%= creature.description %> | <%= link_to 'Edit', 
+		edit_creature_path(creature) %> | <%= link_to 'Delete', 
+		creature, method: :delete %>
+	</p>
+
+<% end %>
